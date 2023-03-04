@@ -44,4 +44,4 @@ async def root():
 if __name__ == "__main__":
     my_ip = requests.get('https://api.my-ip.io/ip').text
     logger.info(f"My IP: {my_ip}")
-    uvicorn.run('main:app', host='0.0.0.0', port=8099)
+    uvicorn.run('main:app', host='0.0.0.0', port=os.environ.get('PORT'))
