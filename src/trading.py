@@ -60,4 +60,3 @@ class BinanceTrading:
 
     def sell(self, symbol, leverage, quantity=None, max_quantity_ratio=0.1):
         self.order.create_order(Client.SIDE_SELL, symbol, leverage, quantity, max_quantity_ratio)
-

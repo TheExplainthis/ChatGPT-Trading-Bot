@@ -1,4 +1,1 @@
-requests==2.28.0
-uvicorn==0.17.6
-fastapi==0.78.0
 python-binance==1.0.15
