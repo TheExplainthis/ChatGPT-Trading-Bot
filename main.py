@@ -13,9 +13,6 @@ binance_trading = BinanceTrading(os.environ.get('API_KEY'), os.environ.get('API_
 
 @app.route('/webhook', methods=['POST'])
 def tradingview_request():
-    logger.info(request)
-    logger.info('=============================')
-    logger.info(request.data)
     data = json.loads(request.data)
     logger.info(data)
     if data.get('passphrase', None) != os.environ.get('PASSPHRASE'):
@@ -29,7 +26,7 @@ def tradingview_request():
     leverage = data.get('leverage')
     quantity = data.get('quantity')
     max_quantity_ratio = data.get('max_quantity_ratio')
-
+    logger.info(f'symbol:{symbol} ,leverage: {leverage}, quantity: {quantity}, max_quantity_ratio: {max_quantity_ratio}, message: {data.get("message")}')
     if data.get('message') == 'Sell' or data.get('message') == 'Buy_Exit':
         logger.info(f'SELL: {symbol}, leverage: {leverage}, quantity: {quantity}, max_quantity_ratio: {max_quantity_ratio}')
         binance_trading.sell(symbol, leverage, quantity, max_quantity_ratio)
