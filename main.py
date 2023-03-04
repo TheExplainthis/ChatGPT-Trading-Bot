@@ -1,5 +1,4 @@
 from flask import Flask, request
-import uvicorn
 
 import json
 import os
