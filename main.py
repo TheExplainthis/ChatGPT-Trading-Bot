@@ -12,7 +12,7 @@ binance_trading = BinanceTrading(os.environ.get('API_KEY'), os.environ.get('API_
 
 
 @app.route('/webhook', methods=['POST'])
-async def tradingview_request():
+def tradingview_request():
     data = json.loads(request.data)
     logger.info(data)
     if data.get('passphrase', None) != os.environ.get('PASSPHRASE'):
