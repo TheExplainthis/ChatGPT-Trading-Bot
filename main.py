@@ -1,19 +1,20 @@
-from fastapi import FastAPI, Request
+from flask import Flask, request
 import uvicorn
 
+import json
 import os
 import requests
 from src.trading import BinanceTrading
 from src.logger import logger
 
-app = FastAPI()
+app = Flask(__name__)
 
 binance_trading = BinanceTrading(os.environ.get('API_KEY'), os.environ.get('API_SECRET_KEY'))
 
 
-@app.post('/webhook')
-async def tradingview_request(request: Request):
-    data = await request.json()
+@app.route('/webhook', methods=['POST'])
+async def tradingview_request():
+    data = json.loads(request.data)
     logger.info(data)
     if data.get('passphrase', None) != os.environ.get('PASSPHRASE'):
         logger.warning('Wrong passphrase')
@@ -36,9 +37,9 @@ async def tradingview_request(request: Request):
     return {"message": "successful"}
 
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
+@app.route('/', methods=['GET'])
+def home():
+    return 'Hello, World!'
 
 
 if __name__ == "__main__":
