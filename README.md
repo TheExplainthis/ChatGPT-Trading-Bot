@@ -111,7 +111,7 @@
             ```
         - 新增位置，在 Terminal 輸入：
             ```
-            $ heroku git:remote -a [App Name]
+            $ heroku git:remote -a [你的 App Name]
             ```
     5. 將 repo 推上 Heroku，在 Terminal 輸入：
         ```

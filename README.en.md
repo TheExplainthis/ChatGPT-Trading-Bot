@@ -112,13 +112,22 @@ This repository teaches you how to use ChatGPT to help you write trading program
             ```
         - Add location, enter in the Terminal:
             ```
-            $ heroku git:remote -a [App Name]
+            $ heroku git:remote -a [Your App Name]
             ```
     5. Push the repo to Heroku, enter in the Terminal:
         ```
         $ git push heroku main
         ```
     6. After successful deployment, your URL will be in `Settings` -> `Domains`
+    7. After clicking the link, you will see `Hello, World!`
+    8. Enter `heroku logs --tail` in the Terminal and find the location of "My IP". Copy the IP address.
+        For example:
+        ```
+        2023-03-05T13:38:36.171417+00:00 app[web.1]: My IP: 54.78.178.135
+        ```
+    9. Go back to [Binance](https://www.binance.com/en), click `Edit restrictions ` for the Token you just created -> check `Restrict access to trusted IPs only (Recommended)` under `IP access restrictions` -> add the IP from the previous step. 
+    10. Check the box for `Enable Futures` at the top.
+    11. Click `Save`
 3. CronJob Scheduled Request Sending
     1. Register/Login to [cron-job.org](https://cron-job.org/en/)
     2. Choose `CREATE CRONJOB` in the right upper corner of the backend
