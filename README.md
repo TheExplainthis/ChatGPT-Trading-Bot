@@ -75,7 +75,7 @@
     2. 右上方有一個 `New` -> `Create new app`
     3. App Name: `輸入此 App 名稱` ， `Region`: `Europe`
     4. `Create app`
-    - 注意：選擇部署平台時有兩個限制：幣安若需要合約交易，則需要有 IP 位置、幣安的 API 有地區限制，像是 IP 在美國的地區就無法使用。
+    > 注意：選擇部署平台時有兩個限制：幣安若需要合約交易，則需要有 IP 位置、幣安的 API 有地區限制，像是 IP 在美國的地區就無法使用。
 
 ### 專案執行
 1. 環境變數設定
@@ -158,7 +158,7 @@
         "message": {{strategy.order.alert_message}}
         }
         ```
-        - 解釋：合約交易設定 `BTCUSDT` 交易對槓桿為 `10` 倍，數量為 `0.002` 個比特幣。
+        > 解釋：合約交易設定 `BTCUSDT` 交易對槓桿為 `10` 倍，數量為 `0.002` 個比特幣。
     3. Notifications 設定
         1. Webhook URL 設定： Heroku 裡的 URL （`Settings` -> `Domains` ）+ `/webhook`
         - 例如
