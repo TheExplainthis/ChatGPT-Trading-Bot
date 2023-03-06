@@ -1,4 +1,4 @@
-# ChatGPT Discord Bot
+# ChatGPT Trading Bot
 
 中文 | [English](README.en.md)
 
@@ -41,7 +41,7 @@
         if sell_signal
             strategy.entry("Sell", strategy.short)
         ```
-    - 在 Buy, Sell, Buy Exit, Sell Exit 後面，需要添加參數 `alert_message`，這樣後續設定 Notification 食材不會出錯。
+    - 在 Buy, Sell, Buy Exit, Sell Exit 後面，需要添加參數 `alert_message`，這樣後續設定 Notification 時才不會出錯。
         ```python
         if long_bb and long_ma and macd_above_signal and time >= start_time
             strategy.entry("Buy", strategy.long, alert_message="Buy")

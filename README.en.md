@@ -1,4 +1,4 @@
-# ChatGPT Discord Bot
+# ChatGPT Trading Bot
 
 [中文](README.md) | English
 
