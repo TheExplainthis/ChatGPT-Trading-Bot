@@ -168,5 +168,10 @@ This repository teaches you how to use ChatGPT to help you write trading program
             https://chatgpt-trading-bot.herokuapp.com/webhook
             ```
 
+## Support Us
+Like this free project? Please consider [supporting us](https://www.buymeacoffee.com/explainthis) to keep it running.
+
+[<a href="https://www.buymeacoffee.com/explainthis" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="45px" width="162px" alt="Buy Me A Coffee"></a>](https://www.buymeacoffee.com/explainthis)
+
 ## License
 [MIT](LICENSE)
